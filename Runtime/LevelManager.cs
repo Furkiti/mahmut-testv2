@@ -3,28 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static LevelManager Instance;
 
     private void Awake()
     {
         Instance = this;
     }
 
+    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("<b>Event:</b> GameManagerStart");
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
-            NextLevel();
+        
     }
 
     public void NextLevel()
     {
-        LevelManager.Instance.NextLevel();
+        Debug.Log("<b>Event:</b> NextLevel");
+
     }
 }
